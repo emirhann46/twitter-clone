@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Eğer özel animasyonları eklemek istiyorsanız: */
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-fly-1 {
+    animation: fly 15s linear infinite;
+  }
+
+  .animate-fly-2 {
+    animation: fly 18s linear infinite;
+  }
+
+  .animate-fly-3 {
+    animation: fly 21s linear infinite;
+  }
+
+  .animate-fly-4 {
+    animation: fly 24s linear infinite;
+  }
+
+  .animate-fly-5 {
+    animation: fly 27s linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fly {
+  0% {
+    left: -50px;
+    transform: translateY(0) scale(0.8);
+  }
+
+  10% {
+    transform: translateY(-20px) scale(1);
+  }
+
+  20% {
+    transform: translateY(10px) scale(0.9);
+  }
+
+  30% {
+    transform: translateY(-10px) scale(1.1);
+  }
+
+  40% {
+    transform: translateY(15px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) scale(0.9);
+  }
+
+  75% {
+    transform: translateY(10px) scale(1);
+  }
+
+  100% {
+    left: calc(100% + 50px);
+    transform: translateY(0) scale(0.8);
+  }
+}

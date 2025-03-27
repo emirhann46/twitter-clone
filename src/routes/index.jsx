@@ -1,32 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
+import ExplorePage from "~/pages/explore";
 import HomePage from "~/pages/home";
-// import Home from "../pages/Home";
-// import Profile from "../pages/Profile";
-// import Explore from "../pages/Explore";
-// import Notifications from "../pages/Notifications";
-// import Messages from "../pages/Messages";
-// import NotFound from "../pages/NotFound";
-// import Layout from "../components/Layout";
+import NotFound from "~/pages/not-found";
+import NotificationsPage from "~/pages/notifications";
 
-// Import your page components here
-// Create and export the router
 const routes = createBrowserRouter([
   {
     path: "/",
     element:  <HomePage />,
   },
-  {
-    path: "/profile",
-    element: <div>Profile</div>,
-  },
+
   {
     path: "/explore",
-    element: <div>Explore</div>,
+    element: <ExplorePage />,
   },
   {
     path: "/notifications",
-    element: <div>Notifications</div>,
+    element: <NotificationsPage />,
   },
+  {
+    path: "*",
+    element: <NotFound />, // 404 page 
+  }
 ]);
 
 export default routes;
