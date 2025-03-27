@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import HomePage from "~/pages/home";
 // import Home from "../pages/Home";
 // import Profile from "../pages/Profile";
 // import Explore from "../pages/Explore";
@@ -9,37 +10,23 @@ import { createBrowserRouter } from "react-router-dom";
 
 // Import your page components here
 // Create and export the router
-const router = createBrowserRouter([
+const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: "profile/:username",
-        element: <Profile />
-      },
-      {
-        path: "explore",
-        element: <Explore />
-      },
-      {
-        path: "notifications",
-        element: <Notifications />
-      },
-      {
-        path: "messages",
-        element: <Messages />
-      },
-      {
-        path: "*",
-        element: <NotFound />
-      }
-    ]
-  }
+    element:  <HomePage />,
+  },
+  {
+    path: "/profile",
+    element: <div>Profile</div>,
+  },
+  {
+    path: "/explore",
+    element: <div>Explore</div>,
+  },
+  {
+    path: "/notifications",
+    element: <div>Notifications</div>,
+  },
 ]);
 
-export default router;
+export default routes;
