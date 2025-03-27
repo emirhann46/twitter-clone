@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 /* Eğer özel animasyonları eklemek istiyorsanız: */
+body{
+  @apply bg-black text-white;
+}
 
 @layer utilities {
   .animate-fade-in {
