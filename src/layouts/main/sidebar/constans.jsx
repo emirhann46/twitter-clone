@@ -174,6 +174,7 @@ const menu = [
   {
     path: '/messages',
     title: 'Mesajlar',
+    notification: 10,
     icon: {
       active: icons.messages.active,
       inactive: icons.messages.inactive
