@@ -4,7 +4,7 @@ import Menu from './menu'
 
 function Sidebar() {
   return (
-    <div className='w-[275px] min-h-screen px-2'>
+    <div className='xl:w-[275px] flex flex-col w-[165px] min-h-screen px-2'>
       
       <Logo />
 
