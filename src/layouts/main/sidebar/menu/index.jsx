@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import classNames from "classnames";
 import menu from "../constans";
+import Button from "~/components/button";
 
 export default function Menu() {
   return (
@@ -33,6 +34,7 @@ export default function Menu() {
           )}
         </NavLink>
       ))}
+      <Button size="md">Oluştur</Button>
     </nav>
   )
 }
