@@ -34,7 +34,7 @@ export default function Menu() {
           )}
         </NavLink>
       ))}
-      <Button size="md">Oluştur</Button>
+      <Button size="md">Oluştur </Button>
     </nav>
   )
 }
