@@ -8,7 +8,7 @@ export default function Menu() {
       {menu.map((menuItem, index) => (
         <NavLink
           key={index}
-          to={menuItem.path}
+          to={typeof menuItem.path === 'function' ? menuItem.path() : menuItem.path}
           className={({ isActive }) =>
             classNames("py-1 block group", {
               "font-bold": isActive
@@ -17,8 +17,16 @@ export default function Menu() {
         >
           {({ isActive }) => (
             <div className={classNames("inline-flex items-center gap-5 py-2 p-3 rounded-full transition-colors group-hover:bg-[#eff3f41a]")}>
-              {isActive ? menuItem.icon.active : menuItem.icon.inactive}
-              <div className="text-xl hidden xl:block ">
+              <div className="relative">
+                {menuItem.notification > 0 && (
+                  <span className="absolute -top-2 -right-2 flex items-center justify-center bg-[#1d9bf0] text-white text-[10px] font-bold rounded-full w-5 h-5 min-w-[1.25rem]">
+                    {menuItem.notification > 99 ? '99+' : menuItem.notification}
+                  </span>
+                )}
+                {isActive ? menuItem.icon.active : menuItem.icon.inactive}
+              </div>
+              
+              <div className="text-xl hidden xl:block">
                 {menuItem.title}
               </div>
             </div>
