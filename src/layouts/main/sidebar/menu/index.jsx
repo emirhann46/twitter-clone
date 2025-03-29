@@ -36,7 +36,9 @@ export default function Menu() {
       ))}
       <button className="py-1 block group">
   <div className="p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]">
+<div className="w-[26.25px] h-[26.25px] relative">
 
+</div>
 
 
  </div>      
