@@ -32,9 +32,18 @@ export default function Menu() {
               </div>
             </div>
           )}
-        </NavLink>
+       </NavLink>
       ))}
-      <Button size="md">Oluştur </Button>
+      <button className="py-1 block group">
+  <div className="p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]">
+
+
+
+ </div>      
+
+     </button>
+
+      <Button size="md">Gönder</Button>
     </nav>
   )
 }
