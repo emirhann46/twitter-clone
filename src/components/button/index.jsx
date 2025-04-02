@@ -18,7 +18,7 @@ export default function Button({ size = "normal", children }) {
 }
 
 Button.propTypes = {
-  size: PropTypes.oneOf(["normal", "md", "lg"]),
+  size: PropTypes.oneOf(["small","normal", "md", "lg"]),
   children: PropTypes.node.isRequired
 };
 
