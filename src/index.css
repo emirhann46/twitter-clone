@@ -1,12 +1,14 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
+/* Eski @tailwind utilities */
 
-
-/* Eğer özel animasyonları eklemek istiyorsanız: */
-body {
-  @apply bg-black text-white;
-}
-
+/* Özel utility class'lar */
 @layer utilities {
+  .shadow-custom {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px,
+      rgba(255, 255, 255, 0.15) 0px 0px 3px 1px;
+  }
+
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out;
   }
@@ -32,6 +34,12 @@ body {
   }
 }
 
+/* Arka plan ve yazı rengi */
+body {
+  @apply bg-black text-white;
+}
+
+/* Keyframe animasyonlar */
 @keyframes fadeIn {
   0% {
     opacity: 0;
