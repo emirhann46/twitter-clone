@@ -11,7 +11,7 @@ function More() {
 
           </div>
           <div className="pr-4 mb-2 text-xl ">
-            Daha fazla
+            Daha fazla...
           </div>
 
 
