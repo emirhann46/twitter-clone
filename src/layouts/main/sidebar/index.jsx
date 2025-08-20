@@ -9,6 +9,12 @@ function Sidebar() {
       <Logo />
 
       <Menu />
+
+      <div className='mt-auto'>
+        <div className='py-3'>
+          test
+        </div>
+      </div>
       
     </div>
   )

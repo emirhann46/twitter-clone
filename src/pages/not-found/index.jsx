@@ -35,14 +35,14 @@ function NotFound() {
       </div>
 
       {/* Animasyonlu kuşlar */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 left-2 z-0">
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
             className={`absolute w-8 h-8 text-[#1da1f2] animate-fly-${i + 1}`}
             style={{
               top: `${(i + 1) * 15}%`,
-              animationDelay: `${i * 0.8}s`,
+              animationDelay: `${i * 0.2}s`,
               animationDuration: `${15 + i * 2}s`
             }}
           >
